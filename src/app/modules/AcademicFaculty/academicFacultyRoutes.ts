@@ -16,6 +16,11 @@ router.patch(
   validateRequest(academicFacultyValidations.academicFacultySchemaValidation),
   academicFacultyControllers.updateFaculty,
 );
+router.get(
+  '/:facultyId',
+  // validateRequest(academicFacultyValidations.academicFacultySchemaValidation),
+  academicFacultyControllers.getSingleFaculty,
+);
 
 router.get("/",academicFacultyControllers.getAllFaculties)
 

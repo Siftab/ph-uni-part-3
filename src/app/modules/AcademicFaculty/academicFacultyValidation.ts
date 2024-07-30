@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 const academicFacultySchemaValidation = z.object({
-    name: z.string({invalid_type_error:"Faculty name must be string "}),
+    body:z.object({name: z.string({invalid_type_error:"Faculty name must be string "}),})
 });
 
 
