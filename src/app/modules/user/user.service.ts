@@ -25,7 +25,7 @@ const createStudentIntoDB = async (password: string, payload: TStudent) => {
   const session =await mongoose.startSession()
 
 try {
-
+      session.startTransaction()
     //set  generated id
     userData.id = await generateStudentId(admissionSemester);
 
